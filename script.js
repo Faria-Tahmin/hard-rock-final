@@ -27,6 +27,39 @@ function searchResult() {
             const type = song.type;
             const img = song.artist.picture_medium;
 // result template           
+
+//
+if(data.lyrics === undefined){
+    document.getElementById("heading").innerText = "No lyrics";
+    document.getElementById("lyrics").innerText = "";
+
+}
+else{
+
+    document.getElementById("heading").innerText = `${songTitle}
+    ${songArtist}`
+    document.getElementById("lyrics").innerText = data.lyrics;
+}
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             const result = document.getElementById('search-result');
             result.innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                         <div class="col-md-2">
