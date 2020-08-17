@@ -29,7 +29,7 @@ function searchResult() {
 // result template           
 
 //
-if(data.lyrics === undefined){
+if(apidata.lyrics === undefined){
     document.getElementById("heading").innerText = "No lyrics";
     document.getElementById("lyrics").innerText = "";
 
