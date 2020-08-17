@@ -1,32 +1,18 @@
 function getLyrics(artist, title) {
     document.getElementById(`lyrics-button${i + 1}`).addEventListener("click", function () {
-        fetch(`https://api.lyrics.ovh/v1/${songArtist}/${songTitle}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.lyrics === undefined) {
-                    document.getElementById("heading").innerText = "No lyrics";
-                    document.getElementById("lyrics").innerText = "";
-
-                }
-                else {
-
-                    document.getElementById("heading").innerText = `${songTitle}
-                ${songArtist}`
-                    document.getElementById("lyrics").innerText = data.lyrics;
-                }
-            }
+        
 
 
-    // fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
-    //     .then(res => res.json())
-    //     .then(lyricsData => {
-    //         const lyrics = lyricsData.lyrics;
-    //         const lyricesDisplay = document.getElementById('single-lyrics');
-    //         lyricesDisplay.innerHTML = `<h2 class="text-success mb-4">${artist} - ${title}</h2>
-    //                                     <pre class="lyric text-white">${lyrics}</pre>`
-    //     })
-    //     document.getElementById('search-result').innerHTML = ''; // close song suggestions 
-}
+    fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
+        .then(res => res.json())
+        .then(lyricsData => {
+            const lyrics = lyricsData.lyrics;
+            const lyricesDisplay = document.getElementById('single-lyrics');
+            lyricesDisplay.innerHTML = `<h2 class="text-success mb-4">${artist} - ${title}</h2>
+                                        <pre class="lyric text-white">${lyrics}</pre>`
+        })
+        document.getElementById('search-result').innerHTML = ''; // close song suggestions 
+});
 }
 
 
