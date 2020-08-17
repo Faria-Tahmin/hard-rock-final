@@ -1,8 +1,8 @@
 function getLyrics(artist, title) {
     fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
         .then(res => res.json())
-        .then(lyricData => {
-            const lyrics = lyricData.lyrics;
+        .then(lyricsData => {
+            const lyrics = lyricsData.lyrics;
             const lyricesDisplay = document.getElementById('single-lyrics');
             lyricesDisplay.innerHTML = `<h2 class="text-success mb-4">${artist} - ${title}</h2>
                                         <pre class="lyric text-white">${lyrics}</pre>`
