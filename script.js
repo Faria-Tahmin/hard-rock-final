@@ -28,20 +28,7 @@ function searchResult() {
             const img = song.artist.picture_medium;
 // result template           
 
-//
-if(apidata.lyrics === undefined){
-    document.getElementById("heading").innerText = "No lyrics";
-    document.getElementById("lyrics").innerText = "";
 
-}
-else{
-
-    document.getElementById("heading").innerText = `${songTitle}
-    ${songArtist}`
-    document.getElementById("lyrics").innerText = data.lyrics;
-}
-
-//
 
 
 
