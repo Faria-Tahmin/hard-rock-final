@@ -28,25 +28,6 @@ function searchResult() {
             const img = song.artist.picture_medium;
 // result template           
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             const result = document.getElementById('search-result');
             result.innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                         <div class="col-md-2">
